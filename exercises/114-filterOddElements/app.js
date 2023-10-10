@@ -1,5 +1,9 @@
 function filterOddElements(arr) {
   // your code here
+
+  let resultado = arr.filter(el => el%2 != 0);
+
+  return resultado;
   
 }
 

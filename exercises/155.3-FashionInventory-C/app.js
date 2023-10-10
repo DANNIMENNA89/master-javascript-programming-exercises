@@ -19,7 +19,26 @@ let currentInventory = [
 
 function renderInventory(shoeList) {
     // your code here
-    
+    let arr = [];
+    for (let i = 0; i < shoeList.length; i++) {
+      let arr1 = [shoeList[i].name];
+      for (let j = 0; j < shoeList[i].shoes.length; j++) {
+      
+        let arr2 =[];
+        arr2 = shoeList[i].shoes[j].name.split(' ');
+        for (let k = 0; k < arr2.length; k++) {
+          if (arr2[k]=="black"){
+            arr1.push(shoeList[i].shoes[j].name);
+            arr.push(arr1);
+            arr1 = shoeList[i].name;
+          }
+          
+        }
+              
+      }
+   
+    }
+   return arr;
 }
 
 console.log(renderInventory(currentInventory));

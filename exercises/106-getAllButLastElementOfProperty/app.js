@@ -1,5 +1,12 @@
 function getAllButLastElementOfProperty(obj, key) {
     // your code here
+    let resultado = [];
+    if (obj.hasOwnProperty(key) && obj[key].length>0 && Array.isArray(obj[key])) {
+        obj[key].pop();
+        return obj[key];
+        
+    }
+    return resultado;
     
 }
 

@@ -1,6 +1,28 @@
 function detectOutlierValue(string) {
     // your code here
-    
+    let par = 0;
+    let impar = 0;
+    let arr = string.split(' ');
+   
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]%2==0){
+            par = par + 1;
+        }
+        else{
+            impar = impar + 1;
+        }
+    }
+    if (par==1){
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]%2==0) return i+1;   
+        }
+    }else{
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]%2!=0) return i+1;
+        }
+        
+    }
+     
 }
 
 // Third number is odd, while the rest of the numbers are even
